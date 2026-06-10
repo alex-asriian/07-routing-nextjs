@@ -4,7 +4,7 @@ import {
   HydrationBoundary,
 } from '@tanstack/react-query'
 import { fetchNoteById } from '@/lib/api'
-import NotePreviewClient from '@/app/notes/filter/[...slug]/NotePreview.client' // вкажіть ваш шлях до NotePreviewClient
+import NotePreviewClient from '@/app/@modal/(.)notes/[id]/NotePreview.client' // вкажіть ваш шлях до NotePreviewClient
 
 type Props = {
   params: Promise<{ id: string }>
