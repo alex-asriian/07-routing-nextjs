@@ -22,7 +22,8 @@ export interface CreateNoteInput {
 export const fetchNotes = async (
   page: number = 1,
   perPage: number = 12,
-  search: string = ''
+  search: string = '',
+  tag?: string
 ): Promise<FetchNotesResponse> => {
   const response: AxiosResponse<FetchNotesResponse> =
     await api.get<FetchNotesResponse>('/notes', {
@@ -30,6 +31,7 @@ export const fetchNotes = async (
         page,
         perPage,
         search: search || undefined,
+        tag: tag || undefined,
       },
     })
   return response.data
