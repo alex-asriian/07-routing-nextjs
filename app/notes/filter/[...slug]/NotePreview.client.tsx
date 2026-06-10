@@ -2,9 +2,9 @@
 
 import { useQuery } from '@tanstack/react-query'
 import { useParams, useRouter } from 'next/navigation'
-import css from '../../../../notes/[id]/NoteDetails.module.css' // Подправьте путь к вашим стилям деталей нотатки, если нужно
+import css from './NotePreview.module.css'
 import { fetchNoteById } from '@/lib/api'
-import Modal from '@/components/Modal/Modal' // Путь к вашему компоненту Modal
+import Modal from '@/components/Modal/Modal'
 
 export default function NotePreviewClient() {
   const params = useParams<{ id: string }>()
